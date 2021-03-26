@@ -27,76 +27,86 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-        return MaterialApp(
-          home: Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              backgroundColor: bp,
-              title: Text(
-                "CalculAge",
-                style: TextStyle(
-                  color: w,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            body: Container(
-              height: double.infinity,
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: bp,
+        appBar: AppBar(
+          toolbarHeight: 150,
+          centerTitle: true,
+          backgroundColor: bp,
+          title: Text(
+            "CalculAge",
+            style: TextStyle(
               color: w,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(height: 150),
-                    Container(
-                      // margin: EdgeInsets.all(10),
-                      margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          fillColor: lb,
-                          filled: true,
-                          labelText: "Birth Year",
-                          labelStyle: TextStyle(
-                            fontSize: 20,
-                            color: bp,
-                          ),
-                          hintText: "Enter your birth year",
-                          hintStyle: TextStyle(
-                            fontSize: 15,
-                            color: pa,
-                            fontWeight: FontWeight.normal,
-                          ),
-                          prefixIcon: Icon(
-                            Icons.calendar_today_outlined,
-                            color: bp,
-                          ),
-                        ),
-                        controller: myController,
-                        style: TextStyle(
-                          color: bp,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        keyboardType: TextInputType.number,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            color: w,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40),
+              topRight: Radius.circular(40),
+            ),
+          ),
+          height: double.infinity,
+          // color: w,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 150),
+                Container(
+                  // margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      fillColor: lb,
+                      filled: true,
+                      labelText: "Birth Year",
+                      labelStyle: TextStyle(
+                        fontSize: 20,
+                        color: bp,
+                      ),
+                      hintText: "Enter your birth year",
+                      hintStyle: TextStyle(
+                        fontSize: 15,
+                        color: pa,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      prefixIcon: Icon(
+                        Icons.calendar_today_outlined,
+                        color: bp,
                       ),
                     ),
-                    SizedBox(height: 50),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      child: Text(
-                        str,
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: bp,
-                        ),
-                      ),
+                    controller: myController,
+                    style: TextStyle(
+                      color: bp,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(height: 100),
-                    Container(
-                      child: ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateColor.resolveWith((states) => pa),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                SizedBox(height: 50),
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                  child: Text(
+                    str,
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: bp,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 100),
+                Container(
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateColor.resolveWith((states) => pa),
                     ),
                     onPressed: () {
                       setState(() {
