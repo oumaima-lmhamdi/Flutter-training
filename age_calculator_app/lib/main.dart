@@ -53,10 +53,6 @@ class _MyAppState extends State<MyApp> {
                       margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
                       child: TextField(
                         decoration: InputDecoration(
-                          // enabledBorder: OutlineInputBorder(
-                          //   borderSide: BorderSide(width: 1, color: pa,),
-                          //   borderRadius: BorderRadius.circular(60),
-                          // ),
                           fillColor: lb,
                           filled: true,
                           labelText: "Birth Year",
@@ -102,8 +98,6 @@ class _MyAppState extends State<MyApp> {
                         style: ButtonStyle(
                           backgroundColor: MaterialStateColor.resolveWith((states) => pa),
                     ),
-                    // padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    // color: bp,
                     onPressed: () {
                       setState(() {
                         AgeCalculator(int.parse(myController.text));
