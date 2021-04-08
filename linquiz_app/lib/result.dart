@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final Function f;
-  Result(this.f);
+  final resultScore;
+  Result(this.f, this.resultScore);
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -10,7 +11,7 @@ class Result extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Done !",
+          "$resultScore",
           style: TextStyle(
             color: Colors.grey,
             fontSize: 32,
