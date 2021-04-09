@@ -132,8 +132,6 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       questionIndex += 1;
     });
-    print("scores = $scores");
-    print("totalScore=$_totalScore");
   }
 
   void s() {
@@ -177,7 +175,6 @@ class _MyAppState extends State<MyApp> {
                     questionIndex -= 1;
                     _totalScore -= scores[questionIndex];
                   });
-                  print("_totalScores=$_totalScore");
                 },
                 child: Icon(
                   Icons.arrow_back_rounded,
